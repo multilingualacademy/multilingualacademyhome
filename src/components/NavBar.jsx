@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Globe2, Book, GraduationCap, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-const Navbar = () => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -46,4 +46,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
