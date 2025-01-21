@@ -6,9 +6,9 @@ export const languagesData = [
     flagUrl: 'https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg',
     translation: "Spanish",
     levels: [
-      { name: 'Básico', url: 'https://multilingualacademyib.netlify.app/' },
-      { name: 'Intermedio', url: 'https://multilingualacademyii.netlify.app/' },
-      { name: 'Avanzado', url: 'https://multilingualacademyia.netlify.app/' },
+      { name: 'Basic', url: 'https://multilingualacademyib.netlify.app/' },
+      { name: 'Intermedium', url: 'https://multilingualacademyii.netlify.app/' },
+      { name: 'Advanced', url: 'https://multilingualacademyia.netlify.app/' },
       { name: 'Superior', url: 'https://multilingualacademyis.netlify.app/' }
     ],
     features: ['Pronunciación americana y británica', 'Vocabulario empresarial', 'Preparación para certificaciones internacionales']
@@ -20,9 +20,10 @@ export const languagesData = [
     flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg',
     translation: "Spanish",
     levels: [
-      { name: 'Básico', url: 'https://multilingualacademyeb.netlify.app/' },
-      { name: 'Intermedio', url: 'https://multilingualacademyei.netlify.app/' },
-      { name: 'Avanzado', url: 'https://multilingualacademyea.netlify.app/' }
+      { name: 'Basic', url: 'https://multilingualacademyeb.netlify.app/' },
+      { name: 'Intermedium', url: 'https://multilingualacademyei.netlify.app/' },
+      { name: 'Advanced', url: 'https://multilingualacademyea.netlify.app/' },
+      { name: 'Across', url: 'https://multilingualacademyec.netlify.app/' }
     ],
     features: ['Dialectos latinoamericanos y españoles', 'Literatura hispana', 'Cultura y tradiciones']
   },
@@ -33,9 +34,9 @@ export const languagesData = [
     flagUrl: 'https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg',
     translation: "French",
     levels: [
-      { name: 'Básico', url: 'https://multilingualacademyfb.netlify.app/' },
-      { name: 'Intermedio', url: 'https://multilingualacademyfi.netlify.app/' },
-      { name: 'Avanzado', url: 'https://multilingualacademyfa.netlify.app/' }
+      { name: 'Basic', url: 'https://multilingualacademyfb.netlify.app/' },
+      { name: 'Intermedium', url: 'https://multilingualacademyfi.netlify.app/' },
+      { name: 'Advanced', url: 'https://multilingualacademyfa.netlify.app/' }
     ],
     features: ['Fonética precisa', 'Cultura francófona', 'Preparación para exámenes DELF y DALF']
   },
@@ -46,9 +47,9 @@ export const languagesData = [
     flagUrl: 'https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg',
     translation: "Italian",
     levels: [
-      { name: 'Básico', url: 'https://multilingualacademyitb.netlify.app/' },
-      { name: 'Intermedio', url: 'https://multilingualacademyiti.netlify.app/' },
-      { name: 'Avanzado', url: 'https://multilingualacademyita.netlify.app/' }
+      { name: 'Basic', url: 'https://multilingualacademyitb.netlify.app/' },
+      { name: 'Intermedium', url: 'https://multilingualacademyiti.netlify.app/' },
+      { name: 'Advanced', url: 'https://multilingualacademyita.netlify.app/' }
     ],
     features: ['Vocabulario cultural', 'Dialectos regionales', 'Pronunciación clara']
   },
@@ -59,9 +60,9 @@ export const languagesData = [
     flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg',
     translation: "Portugues",
     levels: [
-      { name: 'Básico', url: 'https://multilingualacademypb.netlify.app/' },
-      { name: 'Intermedio', url: 'https://multilingualacademypi.netlify.app/' },
-      { name: 'Avanzado', url: 'https://multilingualacademypa.netlify.app/' }
+      { name: 'Basic', url: 'https://multilingualacademypb.netlify.app/' },
+      { name: 'Intermedium', url: 'https://multilingualacademypi.netlify.app/' },
+      { name: 'Advanced', url: 'https://multilingualacademypa.netlify.app/' }
     ],
     features: ['Vocabulario brasileño y europeo', 'Preparación para exámenes CELPE-Bras', 'Cultura musical y literaria']
   },
@@ -72,9 +73,9 @@ export const languagesData = [
     flagUrl: 'https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg',
     translation: "Deutch",
     levels: [
-      { name: 'Básico', url: 'https://multilingualacademyab.netlify.app/' },
-      { name: 'Intermedio', url: 'https://multilingualacademyai.netlify.app/' },
-      { name: 'Avanzado', url: 'https://multilingualacademyaa.netlify.app/' }
+      { name: 'Basic', url: 'https://multilingualacademyab.netlify.app/' },
+      { name: 'Intermedium', url: 'https://multilingualacademyai.netlify.app/' },
+      { name: 'Advanced', url: 'https://multilingualacademyaa.netlify.app/' }
     ],
     features: ['Gramática estructurada', 'Vocabulario técnico', 'Preparación para exámenes Goethe y TestDaF']
   },
@@ -85,9 +86,9 @@ export const languagesData = [
     flagUrl: 'https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg',
     translation: "Russian",
     levels: [
-      { name: 'Básico', url: 'https://multilingualacademyrb.netlify.app/' },
-      { name: 'Intermedio', url: 'https://multilingualacademyri.netlify.app/' },
-      { name: 'Avanzado', url: 'https://multilingualacademyra.netlify.app/' }
+      { name: 'Basic', url: 'https://multilingualacademyrb.netlify.app/' },
+      { name: 'Intermedium', url: 'https://multilingualacademyri.netlify.app/' },
+      { name: 'Advanced', url: 'https://multilingualacademyra.netlify.app/' }
     ],
     features: ['Alfabeto cirílico', 'Vocabulario técnico', 'Literatura clásica']
   },
@@ -98,9 +99,9 @@ export const languagesData = [
     flagUrl: 'https://flagpedia.net/data/flags/w580/cn.png',
     translation: "Mandarin",
     levels: [
-      { name: 'Básico', url: 'https://multilingualacademymb.netlify.app/' },
-      { name: 'Intermedio', url: 'https://multilingualacademymi.netlify.app/' },
-      { name: 'Avanzado', url: 'https://multilingualacademyma.netlify.app/' }
+      { name: 'Basic', url: 'https://multilingualacademymb.netlify.app/' },
+      { name: 'Intermedium', url: 'https://multilingualacademymi.netlify.app/' },
+      { name: 'Advanced', url: 'https://multilingualacademyma.netlify.app/' }
     ],
     features: ['Tonos y pronunciación', 'Escritura de caracteres', 'Cultura china']
   },
@@ -111,9 +112,9 @@ export const languagesData = [
     flagUrl: 'https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg',
     translation: "Japanes",
     levels: [
-      { name: 'Básico', url: 'https://multilingualacademyjb.netlify.app/' },
-      { name: 'Intermedio', url: 'https://multilingualacademyji.netlify.app/' },
-      { name: 'Avanzado', url: 'https://multilingualacademyja.netlify.app/' }
+      { name: 'Basic', url: 'https://multilingualacademyjb.netlify.app/' },
+      { name: 'Intermedium', url: 'https://multilingualacademyji.netlify.app/' },
+      { name: 'Advanced', url: 'https://multilingualacademyja.netlify.app/' }
     ],
     features: ['Escritura Hiragana, Katakana y Kanji', 'Vocabulario de negocios', 'Cultura y etiqueta japonesa']
   }
