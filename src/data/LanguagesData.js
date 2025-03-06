@@ -74,7 +74,7 @@ export const languagesData = [
     translation: "Deutch",
     levels: [
       { name: 'Basic', url: 'https://multilingualacademyab.netlify.app/' },
-      { name: 'Intermedium', url: 'https://multilingualacademyai.netlify.app/' },
+      { name: 'Intermedium', url: 'https://multilingualacademyaint.netlify.app/' },
       { name: 'Advanced', url: 'https://multilingualacademyaava.netlify.app/' }
     ],
     features: ['Gramática estructurada', 'Vocabulario técnico', 'Preparación para exámenes Goethe y TestDaF']
