@@ -20,9 +20,9 @@ export const languagesData = [
     flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg',
     translation: "Spanish",
     levels: [
-      { name: 'Basic', url: 'https://multilingualacademyeb.netlify.app/' },
-      { name: 'Intermedium', url: 'https://multilingualacademyei.netlify.app/' },
-      { name: 'Advanced', url: 'https://multilingualacademyea.netlify.app/' },
+      { name: 'Basic', url: 'multilingualacademyebas.netlify.app/' },
+      { name: 'Intermedium', url: 'multilingualacademyeint.netlify.app/' },
+      { name: 'Advanced', url: 'multilingualacademyeava.netlify.app/' },
       { name: 'Across', url: 'https://multilingualacademyec.netlify.app/' }
     ],
     features: ['Dialectos latinoamericanos y españoles', 'Literatura hispana', 'Cultura y tradiciones']
@@ -75,7 +75,7 @@ export const languagesData = [
     levels: [
       { name: 'Basic', url: 'https://multilingualacademyab.netlify.app/' },
       { name: 'Intermedium', url: 'https://multilingualacademyai.netlify.app/' },
-      { name: 'Advanced', url: 'https://multilingualacademyaa.netlify.app/' }
+      { name: 'Advanced', url: 'multilingualacademyaava.netlify.app/' }
     ],
     features: ['Gramática estructurada', 'Vocabulario técnico', 'Preparación para exámenes Goethe y TestDaF']
   },
