@@ -194,6 +194,56 @@ document.querySelectorAll('.language-card').forEach(card => {
     card.style.transform = 'scale(1)';
   });
 });
+// Bloquear clic derecho
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+// Bloquear teclas F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+U, Windows, Fn, S
+document.addEventListener("keydown", (event) => {
+  if (
+    event.key === "F12" || 
+    event.key === "Meta" || // Bloquea la tecla Windows (Meta en algunos navegadores)
+    event.key === "VK_WIN" || // Bloquea la tecla Windows (Meta en algunos navegadores)
+    event.key === "windows" || // Bloquea la tecla Windows (Meta en algunos navegadores)
+    event.key === "s" && event.ctrlKey || // Bloquea Ctrl + S (Guardar página)
+    event.key === "s" && event.metaKey || // Bloquea Cmd + S en Mac
+    event.key === "s" && event.altKey || // Bloquea Alt + S
+    event.key === "s" && event.shiftKey || // Bloquea Shift + S
+    event.key === "s" && event.ctrlKey && event.shiftKey || // Bloquea Ctrl + Shift + S
+    (event.ctrlKey && event.shiftKey && ["I", "J", "C"].includes(event.key)) ||
+    (event.ctrlKey && event.key === "U") 
+  ) {
+    event.preventDefault();
+  }
+});
+
+// Detectar intento de usar la tecla Fn (No todos los navegadores lo soportan)
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Fn") {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key.toLowerCase() === "s" && event.shiftKey && (event.metaKey || event.key === "Meta")) {
+    event.preventDefault();
+    console.log("Windows + Shift + S is blocked!");
+  }
+});
+// Bloquear selección de texto
+document.addEventListener("selectstart", (event) => event.preventDefault());
+
+// Bloquear copiar (Ctrl + C)
+document.addEventListener("copy", (event) => event.preventDefault());
+// Agregar overlay para evitar screenshots con herramientas web
+const overlay = document.createElement("div");
+overlay.classList.add("protection-overlay");
+document.body.appendChild(overlay);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "s" && event.shiftKey && event.metaKey) {
+    alert("Capturas de pantalla no permitidas.");
+  }
+});
+
   </script>
 </body>
 </html>

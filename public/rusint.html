@@ -1380,6 +1380,57 @@
             "chino": ["问候", "该说什么", "日期和月份", "数字", "名字和颜色", "家庭", "在家", "国家", "口语表达1", "口语表达2", "人体", "职业与工作", "我的房子", "动物", "食物和饮料", "服装", "水果和蔬菜", "运动", "世界和宇宙", "城市", "度量和时间", "假期", "季节", "博物馆与艺术", "交通", "乐器", "花朵", "约会", "剧院和电影", "电话", "旅行社", "在机场", "在飞机上", "移民和海关", "在酒店", "外出散步", "租车", "在餐厅", "购物", "晚上出去", "找住所", "在洗衣店", "去大学", "室友", "爱情和婚姻", "找工作", "与老板和同事交流", "银行业务", "看医生", "寄信和包裹", "乘坐邮轮", "乘火车旅行", "在酒吧", "照相店", "在商场", "理发店", "珠宝店", "汽车", "会见律师", "日常活动", "友谊", "爱情", "逆境", "活动", "科学", "知识", "命运", "教育", "哲学", "进化", "灵魂", "利他主义", "幸福", "美丽", "善良", "理解", "创造力", "决策", "乐趣", "力量", "嫉妒", "弱点", "困难", "自私", "嫉妒", "狂热主义", "信仰", "意志力", "努力", "奉献"],
             "japones": ["挨拶", "何を言うべきか", "日と月", "数字", "名前と色", "家族", "家で", "国々", "口語表現1", "口語表現2", "人体", "職業と仕事", "私の家", "動物", "食べ物と飲み物", "服", "果物と野菜", "スポーツ", "世界と宇宙", "街", "測定と時間", "休暇", "季節", "博物館と芸術", "交通", "楽器", "花", "アポイントメント", "劇場と映画", "電話", "旅行代理店", "空港で", "飛行機内で", "入国と税関", "ホテルで", "散歩に出かけて", "車を借りる", "レストランで", "買い物に出かけて", "夜の外出", "住まいを見つける", "コインランドリーで", "大学に行く", "ルームメイト", "恋愛と結婚", "仕事を得る", "上司や同僚と話す", "銀行業務", "医者を訪ねる", "手紙や荷物を送る", "クルーズに行く", "電車で旅行する", "パブ/バーで", "カメラショップ", "ショッピングモールで", "美容院で", "宝石店で", "車", "弁護士に会う", "日常の活動", "友情", "愛", "逆境", "アクティビティ", "科学", "知識", "運命", "教育", "哲学", "進化", "魂", "利他主義", "幸福", "美しさ", "親切心", "理解", "創造性", "決断", "楽しみ", "力", "嫉妬", "弱さ", "困難", "利己主義", "羨望", "熱狂", "信仰", "意志力", "努力", "寄付"],
         };
+
+// Bloquear clic derecho
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+// Bloquear teclas F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+U, Windows, Fn, S
+document.addEventListener("keydown", (event) => {
+  if (
+    event.key === "F12" || 
+    event.key === "Meta" || // Bloquea la tecla Windows (Meta en algunos navegadores)
+    event.key === "VK_WIN" || // Bloquea la tecla Windows (Meta en algunos navegadores)
+    event.key === "windows" || // Bloquea la tecla Windows (Meta en algunos navegadores)
+    event.key === "s" && event.ctrlKey || // Bloquea Ctrl + S (Guardar página)
+    event.key === "s" && event.metaKey || // Bloquea Cmd + S en Mac
+    event.key === "s" && event.altKey || // Bloquea Alt + S
+    event.key === "s" && event.shiftKey || // Bloquea Shift + S
+    event.key === "s" && event.ctrlKey && event.shiftKey || // Bloquea Ctrl + Shift + S
+    (event.ctrlKey && event.shiftKey && ["I", "J", "C"].includes(event.key)) ||
+    (event.ctrlKey && event.key === "U") 
+  ) {
+    event.preventDefault();
+  }
+});
+
+// Detectar intento de usar la tecla Fn (No todos los navegadores lo soportan)
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Fn") {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key.toLowerCase() === "s" && event.shiftKey && (event.metaKey || event.key === "Meta")) {
+    event.preventDefault();
+    console.log("Windows + Shift + S is blocked!");
+  }
+});
+// Bloquear selección de texto
+document.addEventListener("selectstart", (event) => event.preventDefault());
+
+// Bloquear copiar (Ctrl + C)
+document.addEventListener("copy", (event) => event.preventDefault());
+// Agregar overlay para evitar screenshots con herramientas web
+const overlay = document.createElement("div");
+overlay.classList.add("protection-overlay");
+document.body.appendChild(overlay);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "s" && event.shiftKey && event.metaKey) {
+    alert("Capturas de pantalla no permitidas.");
+  }
+});
+
     </script>
 </body>
 
