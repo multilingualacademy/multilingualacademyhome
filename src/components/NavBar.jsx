@@ -18,11 +18,11 @@ const NavBar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/" className="flex items-center px-3 py-2 rounded-md text-gray-700 hover:text-blue-600">
               <Book className="h-5 w-5 mr-1" />
-              Cursos
+              Languages
             </Link>
             <Link to="/about" className="flex items-center px-3 py-2 rounded-md text-gray-700 hover:text-blue-600">
               <GraduationCap className="h-5 w-5 mr-1" />
-              Nosotros
+              About Us
             </Link>
           </div>
 
@@ -37,8 +37,8 @@ const NavBar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-4">
-            <Link to="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cursos</Link>
-            <Link to="/about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Nosotros</Link>
+            <Link to="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Languages</Link>
+            <Link to="/about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About us</Link>
           </div>
         )}
       </div>

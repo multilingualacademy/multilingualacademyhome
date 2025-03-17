@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multilingual Academy</title>
+  <style>/* Estilos generales */
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    
+    header {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+    }
+    
+    .hero {
+      background: url('hero-bg.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+    }
+    
+    .cta-button {
+      background-color: #ff6f61;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    
+    .language-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    
+    .language-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .language-card img {
+      width: 50px;
+      height: auto;
+    }
+    
+    .cultural-icon {
+      font-size: 2rem;
+      margin-top: 10px;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }</style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">Multilingual Academy</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#idiomas">Idiomas</a></li>
+        <li><a href="#metodologia">Metodología</a></li>
+        <li><a href="#calendario">Calendario</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="language-selector">
+        <select id="language-select">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Multilingual Academy</h1>
+      <p>Facilitamos el aprendizaje de idiomas con un enfoque multicultural.</p>
+      <a href="#idiomas" class="cta-button">Explora nuestros cursos</a>
+    </div>
+    <div class="hero-carousel">
+      <!-- Imágenes multiculturales -->
+    </div>
+  </section>
+
+  <!-- Sección de Idiomas -->
+  <section id="idiomas" class="languages">
+    <h2>Idiomas que enseñamos</h2>
+    <div class="language-grid">
+      <!-- Tarjetas de idiomas -->
+      <div class="language-card">
+        <img src="flags/spain.png" alt="Bandera de España">
+        <h3>Español</h3>
+        <p>Niveles: Básico, Intermedio, Avanzado, Superior</p>
+        <div class="cultural-icon">🎨</div>
+      </div>
+      <!-- Repetir para otros idiomas -->
+    </div>
+  </section>
+
+  <!-- Sección de Metodología -->
+  <section id="metodologia" class="methodology">
+    <h2>Nuestra Metodología</h2>
+    <div class="methodology-content">
+      <div class="methodology-item">
+        <img src="icons/multicultural.png" alt="Icono multicultural">
+        <p>Enfoque multicultural</p>
+      </div>
+      <!-- Repetir para otros aspectos -->
+    </div>
+  </section>
+
+  <!-- Sección de Calendario -->
+  <section id="calendario" class="schedule">
+    <h2>Calendario y Horarios</h2>
+    <div class="calendar">
+      <!-- Calendario interactivo -->
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div class="map">
+      <!-- Mapa de ubicación -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Multilingual Academy. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Selector de idioma
+document.getElementById('language-select').addEventListener('change', function() {
+  alert('Idioma seleccionado: ' + this.value);
+});
+
+// Animaciones al pasar el cursor
+document.querySelectorAll('.language-card').forEach(card => {
+  card.addEventListener('mouseover', () => {
+    card.style.transform = 'scale(1.05)';
+    card.style.transition = 'transform 0.3s ease';
+  });
+  card.addEventListener('mouseout', () => {
+    card.style.transform = 'scale(1)';
+  });
+});
+  </script>
+</body>
+</html>

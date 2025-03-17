@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Academy - Aprende idiomas con enfoque multicultural</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      /* Base and Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #666;
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.main-nav {
+    padding: 15px 0;
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #4d7bf3;
+}
+
+.language-selector {
+    margin-right: 25px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
+
+.cta-button a {
+    background-color: #4d7bf3;
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button a:hover {
+    background-color: #3a68e0;
+}
+
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.mobile-menu-button span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-button span:nth-child(1) {
+    top: 0;
+}
+
+.mobile-menu-button span:nth-child(2) {
+    top: 9px;
+}
+
+.mobile-menu-button span:nth-child(3) {
+    top: 18px;
+}
+
+.mobile-menu-button.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-button.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    background-color: white;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #4d7bf3;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn.primary {
+    background-color: #4d7bf3;
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #3a68e0;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: #4d7bf3;
+    border: 1px solid #4d7bf3;
+}
+
+.btn.secondary:hover {
+    background-color: rgba(77, 123, 243, 0.1);
+}
+
+.btn.small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.carousel {
+    flex: 1;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Languages Section */
+.languages {
+    background-color: #f9f9f9;
+}
+
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.language-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.language-flag {
+    width: 60px;
+    height: 40px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.spanish-flag {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><rect width="900" height="600" fill="%23c60b1e"/><rect width="900" height="300" fill="%23ffc400" y="150"/></svg>');
+}
+
+.english-flag {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(%23s)"><path d="M0,0 v30 h60 v-30 z" fill="%23012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="%23fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(%23t)" stroke="%23C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="%23fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="%23C8102E" stroke-width="6"/></g></svg>');
+}
+
+.french-flag {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><rect width="900" height="600" fill="%23ED2939"/><rect width="600" height="600" fill="%23fff"/><rect width="300" height="600" fill="%23002395"/></svg>');
+}
+
+.italian-flag {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><rect width="900" height="600" fill="%23f1f2f1"/><rect width="300" height="600" fill="%23009246"/><rect width="300" height="600" fill="%23ce2b37" x="600"/></svg>');
+}
+
+.portuguese-flag {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><rect width="900" height="600" fill="%23006600"/><rect width="600" height="600" fill="%23ff0000"/></svg>');
+}
+
+.german-flag {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><rect width="900" height="600" fill="%23FFCE00"/><rect width="900" height="400" fill="%23DD0000"/><rect width="900" height="200" fill="%23000000"/></svg>');
+}
+
+.russian-flag {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><rect width="900" height="600" fill="%23fff"/><rect width="900" height="400" fill="%230039A6" y="200"/><rect width="900" height="200" fill="%23D52B1E" y="400"/></svg>');
+}
+
+.chinese-flag {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><rect width="900" height="600" fill="%23DE2910"/><polygon points="225,50 259,154 370,154 280,215 314,320 225,260 136,320 170,215 80,154 191,154" fill="%23FFDE00"/></svg>');
+}
+
+.japanese-flag {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><rect width="900" height="600" fill="%23fff"/><circle cx="450" cy="300" r="150" fill="%23bc002d"/></svg>');
+}
+
+.language-name {
+    margin-bottom: 12px;
+    color: #333;
+    transition: opacity 0.3s ease;
+}
+
+.language-levels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.level {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    background-color: #f0f4ff;
+    border-radius: 20px;
+    color: #4d7bf3;
+}
+
+.cultural-element {
+    width: 40px;
+    height: 40px;
+    margin: 15px 0;
+    opacity: 0.7;
+}
+
+/* Cultural elements - simplified geometric patterns */
+.spanish-element {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><path d="M0,50 L50,0 L100,50 L50,100 Z" fill="%23f44336"/></svg>');
+}
+
+.english-element {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><circle cx="50" cy="50" r="40" stroke="%23001F5B" stroke-width="10" fill="none"/></svg>');
+}
+
+.french-element {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><path d="M50,10 L90,50 L50,90 L10,50 Z" fill="%23002395"/></svg>');
+}
+
+.italian-element {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><circle cx="50" cy="50" r="40" fill="%23009246"/></svg>');
+}
+
+.portuguese-element {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><circle cx="50" cy="50" r="40" fill="%23006600"/><circle cx="50" cy="50" r="30" fill="%23ff0000"/></svg>');
+}
+
+.german-element {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><rect width="80" height="80" x="10" y="10" fill="%23000000"/><rect width="60" height="60" x="20" y="20" fill="%23DD0000"/><rect width="40" height="40" x="30" y="30" fill="%23FFCE00"/></svg>');
+}
+
+.russian-element {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><path d="M20,20 L80,20 L80,80 L20,80 Z" fill="%230039A6"/><path d="M30,30 L70,30 L70,70 L30,70 Z" fill="%23D52B1E"/></svg>');
+}
+
+.chinese-element {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><path d="M10,40 L90,40 M10,60 L90,60 M40,10 L40,90 M60,10 L60,90" stroke="%23DE2910" stroke-width="10"/></svg>');
+}
+
+.japanese-element {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><circle cx="50" cy="50" r="30" fill="%23bc002d"/></svg>');
+}
+
+/* Language Detail */
+.language-detail {
+    background-color: white;
+}
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.detail-flag {
+    width: 80px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.cultural-description {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.level-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.level-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.level-card h3 {
+    color: #4d7bf3;
+    margin-bottom: 10px;
+}
+
+.level-card ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    color: #666;
+}
+
+.cultural-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.cultural-images img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials h3 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.testimonial-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testimonial-author div {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-author span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Methodology Section */
+.methodology {
+    background-color: #f0f4ff;
+}
+
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.method-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.method-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+/* Method icons */
+.immersion-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><circle cx="50" cy="50" r="40" fill="%234d7bf3"/><circle cx="50" cy="50" r="20" fill="white"/></svg>');
+}
+
+.conversation-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><path d="M20,30 L60,30 L60,60 L40,60 L30,75 L30,60 L20,60 Z" fill="%234d7bf3"/><path d="M40,40 L80,40 L80,70 L60,70 L50,85 L50,70 L40,70 Z" fill="%23f0f4ff" stroke="%234d7bf3" stroke-width="2"/></svg>');
+}
+
+.technology-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><rect x="20" y="20" width="60" height="40" rx="5" fill="%234d7bf3"/><rect x="30" y="30" width="40" height="20" fill="white"/><rect x="40" y="70" width="20" height="10" fill="%234d7bf3"/><rect x="35" y="60" width="30" height="10" fill="%234d7bf3"/></svg>');
+}
+
+.native-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><circle cx="50" cy="35" r="15" fill="%234d7bf3"/><path d="M30,80 L50,55 L70,80" fill="none" stroke="%234d7bf3" stroke-width="6"/></svg>');
+}
+
+.methodology-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.methodology-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Schedule Section */
+.schedule {
+    background-color: white;
+}
+
+.schedule-filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.schedule-filter {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    min-width: 180px;
+}
+
+.schedule-table-container {
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #f0f4ff;
+}
+
+/* Level Quiz */
+.level-quiz {
+    background-color: #f0f4ff;
+}
+
+.quiz-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.quiz-question {
+    margin-bottom: 30px;
+}
+
+.quiz-question p {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quiz-options label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.quiz-options input {
+    margin-right: 10px;
+}
+
+.quiz-result {
+    max-width: 700px;
+    margin: 30px auto 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: 500;
+    color: #4d7bf3;
+}
+
+/* Contact Section */
+.contact {
+    background-color: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-form-container,
+.contact-info {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    opacity: 0.8;
+}
+
+/* Info icons */
+.location-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><path d="M50,20 C35,20 25,30 25,45 C25,70 50,85 50,85 C50,85 75,70 75,45 C75,30 65,20 50,20 Z M50,55 C45,55 40,50 40,45 C40,40 45,35 50,35 C55,35 60,40 60,45 C60,50 55,55 50,55 Z" fill="%234d7bf3"/></svg>');
+}
+
+.phone-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><path d="M35,15 L65,15 C70,15 75,20 75,25 L75,75 C75,80 70,85 65,85 L35,85 C30,85 25,80 25,75 L25,25 C25,20 30,15 35,15 Z M40,75 L60,75 C60,75 60,75 60,75 L40,75 C40,75 40,75 40,75 Z" fill="%234d7bf3"/></svg>');
+}
+
+.email-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><path d="M15,25 L85,25 C90,25 95,30 95,35 L95,65 C95,70 90,75 85,75 L15,75 C10,75 5,70 5,65 L5,35 C5,30 10,25 15,25 Z M15,35 L50,55 L85,35 L15,35 Z" fill="%234d7bf3"/></svg>');
+}
+
+.hours-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><circle cx="50" cy="50" r="40" stroke="%234d7bf3" stroke-width="8" fill="none"/><path d="M50,30 L50,50 L65,65" stroke="%234d7bf3" stroke-width="5" fill="none"/></svg>');
+}
+
+.map-container {
+    margin-top: 30px;
+}
+
+.map {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    color: #f0f4ff;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color}
+  
+    </style>
+</head>
+<body>
+    <!-- Navegación -->
+    <header>
+        <nav class="main-nav">
+            <div class="container">
+                <a href="#" class="logo">
+                    <span class="logo-text">Multilingual Academy</span>
+                </a>
+                
+                <div class="nav-right">
+                    <select id="language-selector" class="language-selector">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="it">Italiano</option>
+                        <option value="pt">Português</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ru">Русский</option>
+                        <option value="zh">中文</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                    
+                    <button id="mobile-menu-button" class="mobile-menu-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    
+                    <ul class="nav-links" id="mobile-menu">
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#languages">Idiomas</a></li>
+                        <li><a href="#methodology">Metodología</a></li>
+                        <li><a href="#schedule">Horarios</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li class="cta-button"><a href="#register">Inscríbete</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Multilingual Academy</h1>
+                <p class="subtitle fade-in">Aprende idiomas, descubre culturas</p>
+                <p class="description fade-in">
+                    Facilitamos el aprendizaje de idiomas con un enfoque multicultural, 
+                    donde cada palabra te acerca a una nueva forma de ver el mundo.
+                </p>
+                <div class="cta-buttons fade-in">
+                    <a href="#languages" class="btn primary">Explorar cursos</a>
+                    <a href="#register" class="btn secondary">Inscríbete ahora</a>
+                </div>
+            </div>
+            
+            <div class="carousel fade-in">
+                <div class="carousel-item active">
+                    <img src="/api/placeholder/600/400" alt="Estudiantes diversos aprendiendo juntos">
+                </div>
+                <div class="carousel-item">
+                    <img src="/api/placeholder/600/400" alt="Clase de conversación">
+                </div>
+                <div class="carousel-item">
+                    <img src="/api/placeholder/600/400" alt="Evento cultural">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="languages">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestros Idiomas</h2>
+            <p class="section-description fade-in">
+                Ofrecemos cursos en múltiples idiomas, cada uno diseñado para sumergirte
+                en la cultura y las particularidades de cada lengua.
+            </p>
+            
+            <div class="language-grid">
+                <!-- Español -->
+                <div class="language-card fade-in">
+                    <div class="language-flag spanish-flag"></div>
+                    <h3 class="language-name">Español</h3>
+                    <div class="language-levels">
+                        <span class="level">Básico</span>
+                        <span class="level">Intermedio</span>
+                        <span class="level">Avanzado</span>
+                        <span class="level">Superior</span>
+                    </div>
+                    <div class="cultural-element spanish-element"></div>
+                    <a href="#spanish-detail" class="btn small">Ver detalles</a>
+                </div>
+                
+                <!-- Inglés -->
+                <div class="language-card fade-in">
+                    <div class="language-flag english-flag"></div>
+                    <h3 class="language-name">Inglés</h3>
+                    <div class="language-levels">
+                        <span class="level">Básico</span>
+                        <span class="level">Intermedio</span>
+                        <span class="level">Avanzado</span>
+                        <span class="level">Superior</span>
+                    </div>
+                    <div class="cultural-element english-element"></div>
+                    <a href="#english-detail" class="btn small">Ver detalles</a>
+                </div>
+                
+                <!-- Francés -->
+                <div class="language-card fade-in">
+                    <div class="language-flag french-flag"></div>
+                    <h3 class="language-name">Francés</h3>
+                    <div class="language-levels">
+                        <span class="level">Básico</span>
+                        <span class="level">Intermedio</span>
+                        <span class="level">Avanzado</span>
+                    </div>
+                    <div class="cultural-element french-element"></div>
+                    <a href="#french-detail" class="btn small">Ver detalles</a>
+                </div>
+                
+                <!-- Italiano -->
+                <div class="language-card fade-in">
+                    <div class="language-flag italian-flag"></div>
+                    <h3 class="language-name">Italiano</h3>
+                    <div class="language-levels">
+                        <span class="level">Básico</span>
+                        <span class="level">Intermedio</span>
+                        <span class="level">Avanzado</span>
+                    </div>
+                    <div class="cultural-element italian-element"></div>
+                    <a href="#italian-detail" class="btn small">Ver detalles</a>
+                </div>
+                
+                <!-- Portugués -->
+                <div class="language-card fade-in">
+                    <div class="language-flag portuguese-flag"></div>
+                    <h3 class="language-name">Portugués</h3>
+                    <div class="language-levels">
+                        <span class="level">Básico</span>
+                        <span class="level">Intermedio</span>
+                        <span class="level">Avanzado</span>
+                    </div>
+                    <div class="cultural-element portuguese-element"></div>
+                    <a href="#portuguese-detail" class="btn small">Ver detalles</a>
+                </div>
+                
+                <!-- Alemán -->
+                <div class="language-card fade-in">
+                    <div class="language-flag german-flag"></div>
+                    <h3 class="language-name">Alemán</h3>
+                    <div class="language-levels">
+                        <span class="level">Básico</span>
+                        <span class="level">Intermedio</span>
+                        <span class="level">Avanzado</span>
+                    </div>
+                    <div class="cultural-element german-element"></div>
+                    <a href="#german-detail" class="btn small">Ver detalles</a>
+                </div>
+                
+                <!-- Ruso -->
+                <div class="language-card fade-in">
+                    <div class="language-flag russian-flag"></div>
+                    <h3 class="language-name">Ruso</h3>
+                    <div class="language-levels">
+                        <span class="level">Básico</span>
+                        <span class="level">Intermedio</span>
+                        <span class="level">Avanzado</span>
+                    </div>
+                    <div class="cultural-element russian-element"></div>
+                    <a href="#russian-detail" class="btn small">Ver detalles</a>
+                </div>
+                
+                <!-- Chino -->
+                <div class="language-card fade-in">
+                    <div class="language-flag chinese-flag"></div>
+                    <h3 class="language-name">Chino</h3>
+                    <div class="language-levels">
+                        <span class="level">Básico</span>
+                        <span class="level">Intermedio</span>
+                        <span class="level">Avanzado</span>
+                    </div>
+                    <div class="cultural-element chinese-element"></div>
+                    <a href="#chinese-detail" class="btn small">Ver detalles</a>
+                </div>
+                
+                <!-- Japonés -->
+                <div class="language-card fade-in">
+                    <div class="language-flag japanese-flag"></div>
+                    <h3 class="language-name">Japonés</h3>
+                    <div class="language-levels">
+                        <span class="level">Básico</span>
+                        <span class="level">Intermedio</span>
+                        <span class="level">Avanzado</span>
+                    </div>
+                    <div class="cultural-element japanese-element"></div>
+                    <a href="#japanese-detail" class="btn small">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Detail (Example for Spanish) -->
+    <section id="spanish-detail" class="language-detail">
+        <div class="container">
+            <div class="detail-header fade-in">
+                <div class="detail-flag spanish-flag"></div>
+                <h2>Español</h2>
+            </div>
+            
+            <div class="cultural-description fade-in">
+                <p>
+                    El español es la segunda lengua más hablada del mundo. Con nuestro enfoque cultural,
+                    aprenderás no solo el idioma sino también las ricas tradiciones de España y Latinoamérica.
+                </p>
+            </div>
+            
+            <div class="level-breakdown">
+                <div class="level-card fade-in">
+                    <h3>Básico</h3>
+                    <p>Introducción al español, vocabulario esencial y estructuras gramaticales simples.</p>
+                    <ul>
+                        <li>Duración: 3 meses</li>
+                        <li>Frecuencia: 2 veces por semana</li>
+                        <li>Nivel alcanzado: A1</li>
+                    </ul>
+                </div>
+                
+                <div class="level-card fade-in">
+                    <h3>Intermedio</h3>
+                    <p>Conversación práctica, gramática intermedia y exposición a la cultura hispana.</p>
+                    <ul>
+                        <li>Duración: 4 meses</li>
+                        <li>Frecuencia: 2 veces por semana</li>
+                        <li>Nivel alcanzado: A2-B1</li>
+                    </ul>
+                </div>
+                
+                <div class="level-card fade-in">
+                    <h3>Avanzado</h3>
+                    <p>Fluidez conversacional, estructuras complejas y profundización cultural.</p>
+                    <ul>
+                        <li>Duración: 4 meses</li>
+                        <li>Frecuencia: 3 veces por semana</li>
+                        <li>Nivel alcanzado: B2</li>
+                    </ul>
+                </div>
+                
+                <div class="level-card fade-in">
+                    <h3>Superior</h3>
+                    <p>Dominio del idioma, sutilezas culturales y preparación para certificaciones oficiales.</p>
+                    <ul>
+                        <li>Duración: 5 meses</li>
+                        <li>Frecuencia: 3 veces por semana</li>
+                        <li>Nivel alcanzado: C1-C2</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cultural-images fade-in">
+                <img src="/api/placeholder/280/180" alt="España">
+                <img src="/api/placeholder/280/180" alt="México">
+                <img src="/api/placeholder/280/180" alt="Colombia">
+            </div>
+            
+            <div class="testimonials fade-in">
+                <h3>Lo que dicen nuestros estudiantes</h3>
+                
+                <div class="testimonial-card">
+                    <p>"Aprender español en Multilingual Academy cambió mi perspectiva sobre el idioma. Ahora puedo comunicarme con confianza con mis colegas españoles."</p>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/50/50" alt="Estudiante" class="testimonial-avatar">
+                        <div>
+                            <strong>Sophie Lambert</strong>
+                            <span>Estudiante de nivel Avanzado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="methodology">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestra Metodología</h2>
+            <p class="section-description fade-in">
+                En Multilingual Academy creemos que el aprendizaje de un idioma va más allá de la gramática y el vocabulario.
+                Nuestra metodología se basa en la inmersión cultural y la práctica constante.
+            </p>
+            
+            <div class="method-grid">
+                <div class="method-card fade-in">
+                    <div class="method-icon immersion-icon"></div>
+                    <h3>Inmersión Cultural</h3>
+                    <p>Aprende el idioma a través de su cultura, tradiciones y costumbres.</p>
+                </div>
+                
+                <div class="method-card fade-in">
+                    <div class="method-icon conversation-icon"></div>
+                    <h3>Enfoque Comunicativo</h3>
+                    <p>Priorizamos la comunicación efectiva desde el primer día.</p>
+                </div>
+                
+                <div class="method-card fade-in">
+                    <div class="method-icon technology-icon"></div>
+                    <h3>Tecnología Integrada</h3>
+                    <p>Plataformas digitales que complementan el aprendizaje presencial.</p>
+                </div>
+                
+                <div class="method-card fade-in">
+                    <div class="method-icon native-icon"></div>
+                    <h3>Profesores Nativos</h3>
+                    <p>Instructores nativos y especialistas en enseñanza de idiomas.</p>
+                </div>
+            </div>
+            
+            <div class="methodology-images fade-in">
+                <img src="/api/placeholder/400/250" alt="Clase en acción" class="methodology-image">
+                <img src="/api/placeholder/400/250" alt="Evento cultural" class="methodology-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <h2 class="section-title fade-in">Horarios y Calendario</h2>
+            <p class="section-description fade-in">
+                Ofrecemos flexibilidad horaria para que puedas adaptar tu aprendizaje a tu estilo de vida.
+            </p>
+            
+            <div class="schedule-filters fade-in">
+                <select id="schedule-language" class="schedule-filter">
+                    <option value="all">Todos los idiomas</option>
+                    <option value="es">Español</option>
+                    <option value="en">Inglés</option>
+                    <option value="fr">Francés</option>
+                    <option value="it">Italiano</option>
+                    <option value="pt">Portugués</option>
+                    <option value="de">Alemán</option>
+                    <option value="ru">Ruso</option>
+                    <option value="zh">Chino</option>
+                    <option value="ja">Japonés</option>
+                </select>
+                
+                <select id="schedule-level" class="schedule-filter">
+                    <option value="all">Todos los niveles</option>
+                    <option value="basic">Básico</option>
+                    <option value="intermediate">Intermedio</option>
+                    <option value="advanced">Avanzado</option>
+                    <option value="superior">Superior</option>
+                </select>
+            </div>
+            
+            <div class="schedule-table-container fade-in">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Idioma</th>
+                            <th>Nivel</th>
+                            <th>Días</th>
+                            <th>Horario</th>
+                            <th>Inicio</th>
+                            <th>Vacantes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="es basic">
+                            <td>Español</td>
+                            <td>Básico</td>
+                            <td>Lun - Mié</td>
+                            <td>18:00 - 20:00</td>
+                            <td>15/04/2025</td>
+                            <td>8 disponibles</td>
+                        </tr>
+                        <tr class="en intermediate">
+                            <td>Inglés</td>
+                            <td>Intermedio</td>
+                            <td>Mar - Jue</td>
+                            <td>10:00 - 12:00</td>
+                            <td>20/04/2025</td>
+                            <td>5 disponibles</td>
+                        </tr>
+                        <tr class="fr basic">
+                            <td>Francés</td>
+                            <td>Básico</td>
+                            <td>Mié - Vie</td>
+                            <td>19:00 - 21:00</td>
+                            <td>18/04/2025</td>
+                            <td>10 disponibles</td>
+                        </tr>
+                        <tr class="zh advanced">
+                            <td>Chino</td>
+                            <td>Avanzado</td>
+                            <td>Sáb</td>
+                            <td>09:00 - 13:00</td>
+                            <td>12/04/2025</td>
+                            <td>3 disponibles</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Level Quiz Section -->
+    <section id="level-quiz" class="level-quiz">
+        <div class="container">
+            <h2 class="section-title fade-in">¿No sabes tu nivel?</h2>
+            <p class="section-description fade-in">
+                Responde este breve cuestionario para ayudarte a determinar tu nivel inicial.
+            </p>
+            
+            <form id="level-quiz-form" class="quiz-form fade-in">
+                <div class="quiz-question">
+                    <p>1. ¿Cuánto tiempo has estudiado el idioma que te interesa?</p>
+                    <div class="quiz-options">
+                        <label>
+                            <input type="radio" name="q1" value="1" required>
+                            <span>Nunca o muy poco</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="2">
+                            <span>Algunos meses o en la escuela</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="3">
+                            <span>Más de un año o he vivido en el país</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p>2. ¿Puedes mantener una conversación básica en ese idioma?</p>
+                    <div class="quiz-options">
+                        <label>
+                            <input type="radio" name="q2" value="1" required>
+                            <span>No, solo conozco palabras sueltas</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="2">
+                            <span>Sí, pero con dificultad y temas limitados</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="3">
+                            <span>Sí, me comunico con fluidez en muchos temas</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p>3. ¿Comprendes contenido audiovisual (películas, series) en ese idioma?</p>
+                    <div class="quiz-options">
+                        <label>
+                            <input type="radio" name="q3" value="1" required>
+                            <span>No, necesito subtítulos en mi idioma</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="2">
+                            <span>Parcialmente, entiendo algunas partes</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="3">
+                            <span>Sí, entiendo la mayoría sin ayuda</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn primary">Ver mi nivel recomendado</button>
+            </form>
+            
+            <div id="quiz-result" class="quiz-result fade-in" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contacto</h2>
+            <p class="section-description fade-in">
+                Estamos aquí para responder todas tus dudas y ayudarte a comenzar tu viaje multicultural.
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-form-container fade-in">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="language">Idioma de interés</label>
+                            <select id="language">
+                                <option value="">Seleccionar...</option>
+                                <option value="es">Español</option>
+                                <option value="en">Inglés</option>
+                                <option value="fr">Francés</option>
+                                <option value="it">Italiano</option>
+                                <option value="pt">Portugués</option>
+                                <option value="de">Alemán</option>
+                                <option value="ru">Ruso</option>
+                                <option value="zh">Chino</option>
+                                <option value="ja">Japonés</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn primary">Enviar mensaje</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info fade-in">
+                    <div class="info-item">
+                        <div class="info-icon location-icon"></div>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Av. Cultural 123, Ciudad</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon phone-icon"></div>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+1 234 567 890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon email-icon"></div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@multilingualacademy.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon hours-icon"></div>
+                        <div>
+                            <h3>Horario de atención</h3>
+                            <p>Lun-Vie: 9:00 - 20:00<br>Sáb: 10:00 - 14:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <img src="/api/placeholder/400/200" alt="Mapa de ubicación" class="map">
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar el carrusel de imágenes
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.carousel-item');
+            const totalSlides = slides.length;
+            
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }
+            
+            // Cambiar de slide cada 5 segundos
+            setInterval(nextSlide, 5000);
+            showSlide(currentSlide);
+            
+            // Efectos hover para las tarjetas de idiomas
+            const languageCards = document.querySelectorAll('.language-card');
+            languageCards.forEach(card => {
+                card.addEventListener('mouseover', function() {
+                    const languageName = this.querySelector('.language-name');
+                    const languageFlag = this.querySelector('.language-flag');
+                    languageName.style.opacity = '1';
+                    languageFlag.style.transform = 'scale(1.05)';
+                });
+                
+                card.addEventListener('mouseout', function() {
+                    const languageName = this.querySelector('.language-name');
+                    const languageFlag = this.querySelector('.language-flag');
+                    languageName.style.opacity = '0.8';
+                    languageFlag.style.transform = 'scale(1)';
+                });
+            });
+            
+            // Navegación suave
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Mini-quiz para determinar nivel
+            const quizForm = document.getElementById('level-quiz-form');
+            if (quizForm) {
+                quizForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Obtener respuestas
+                    const answers = [];
+                    document.querySelectorAll('.quiz-question input:checked').forEach(input => {
+                        answers.push(parseInt(input.value));
+                    });
+                    
+                    // Calcular promedio para determinar nivel
+                    const total = answers.reduce((acc, val) => acc + val, 0);
+                    const average = total / answers.length;
+                    
+                    let level;
+                    if (average < 1.5) {
+                        level = "Básico";
+                    } else if (average < 2.5) {
+                        level = "Intermedio";
+                    } else {
+                        level = "Avanzado";
+                    }
+                    
+                    // Mostrar resultado
+                    document.getElementById('quiz-result').textContent = 
+                        `Basado en tus respuestas, te recomendamos comenzar en el nivel ${level}.`;
+                    document.getElementById('quiz-result').style.display = 'block';
+                });
+            }
+            
+            // Cambio de idioma en la navegación
+            const languageSelector = document.getElementById('language-selector');
+            if (languageSelector) {
+                languageSelector.addEventListener('change', function() {
+                    // Aquí se implementaría la lógica para cambiar el idioma del sitio
+                    // Por simplicidad, solo mostramos un mensaje en la consola
+                    console.log(`Idioma cambiado a: ${this.value}`);
+                });
+            }
+            
+            // Animación de fade-in para elementos al hacer scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            function checkFade() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+            
+            // Verificar elementos al cargar y al hacer scroll
+            window.addEventListener('scroll', checkFade);
+            checkFade(); // Verificar también al cargar la página
+            
+            // Menú móvil
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                    mobileMenuButton.classList.toggle('active');
+                });
+            }
+        });
+</script>
+        </body>
+</html>
