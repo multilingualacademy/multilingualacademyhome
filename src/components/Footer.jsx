@@ -11,11 +11,11 @@ const Footer = () => {
               <span className="ml-2 text-lg font-bold">Multilingual Academy</span>
             </div>
             <p className="text-gray-400">
-              Transformando vidas a través del aprendizaje de idiomas
+            Transforming lives through language learning
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contacto</h3>
+            <h3 className="text-lg font-semibold mb-4">Let's talk</h3>
             <div className="space-y-2">
               <div className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-blue-400" />
@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4">Síguenos</h3>
+            <h3 className="text-lg font-semibold mb-4"> Follow us</h3>
             <div className="flex space-x-4">
               <a href="#" className="text-blue-400 hover:text-blue-300">Facebook</a>
               <a href="#" className="text-blue-400 hover:text-blue-300">Instagram</a>
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
-          <p>&copy; 2024 Multilingual Academy. Todos los derechos reservados.</p>
+          <p>&copy; 2024 Multilingual Academy. All rights reserved..</p>
         </div>
       </div>
     </footer>
