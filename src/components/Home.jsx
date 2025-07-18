@@ -8,13 +8,13 @@ const Home = () => {
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-        Master languages with top experts
+        Master a language
         </h1>
         <p className="text-xl text-gray-600 mb-8">
-        Unlock endless opportunities through language learning
+        "Unlock endless opportunities by learning multiple languages."
         </p>
         <button className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
-        Get started today
+        Get started
         </button>
       </div>
 

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Globe2, Book, GraduationCap, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,7 +11,8 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Globe2 className="h-8 w-8 text-blue-600" />
+            <img src="/favicon.png" alt="Logo" className="h-8 w-8 mr-3" />
+
             <span className="ml-2 text-xl font-bold text-gray-800">Multilingual Academy</span>
           </div>
           

@@ -7,11 +7,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <Globe2 className="h-6 w-6 text-blue-400" />
+              <img src="/favicon.png" alt="Logo" className="h-8 w-8 mr-3" />
+
               <span className="ml-2 text-lg font-bold">Multilingual Academy</span>
             </div>
             <p className="text-gray-400">
-            Transforming lives through language learning
+            Transforming lives through language learning.
             </p>
           </div>
           <div>
@@ -19,11 +20,11 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-blue-400" />
-                <span>info@multilingualacademy.com</span>
+                <span>multilingualacademyspanish@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-blue-400" />
-                <span>+1 234 567 890</span>
+                <span>+57 3148616968</span>
               </div>
             </div>
           </div>
@@ -37,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
-          <p>&copy; 2024 Multilingual Academy. All rights reserved..</p>
+          <p>&copy; 2003 Multilingual Academy. All rights reserved</p>
         </div>
       </div>
     </footer>

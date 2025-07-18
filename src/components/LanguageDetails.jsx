@@ -33,7 +33,8 @@ const LanguageDetails = () => {
             className="h-10 w-16 mr-4 rounded shadow"
           />
           <h1 className="text-4xl font-bold text-gray-900 flex items-center">
-            <Globe className="h-8 w-8 mr-3 text-blue-600" />
+            <img src="/favicon.png" alt="Logo" className="h-8 w-8 mr-3" />
+
             {languageInfo.name}
           </h1>
         </div>
